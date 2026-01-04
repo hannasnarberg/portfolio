@@ -21,7 +21,7 @@ body,
 }
 
 :root {
-	--bg-color: #e9efed;
+	--bg-color: #e3f2ed;
 	--accent-color: #b9d2da;
 	--page-max-width: 1920px;
 	--page-padding: 1rem;
@@ -69,7 +69,7 @@ svg {
 }
 
 .topbar svg,
-.mobile-menu svg  {
+.mobile-menu svg {
 	width: 3rem;
 }
 

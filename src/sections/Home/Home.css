@@ -10,6 +10,10 @@
 	stroke-width: 1.5px;
 }
 
+.home svg:hover {
+	stroke-width: 1.75px;
+}
+
 .header-container h1,
 .header-container h2 {
 	margin: 0.5rem 0;

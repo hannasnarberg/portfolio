@@ -20,7 +20,7 @@ function Carousel() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 
 	useEffect(() => {
-		images.forEach((image, index) => {
+		images.forEach((image) => {
 			const img = new Image();
 			img.src = image.src;
 		});
@@ -43,29 +43,18 @@ function Carousel() {
 				>
 					{images.map((image, i) => (
 						<div className="carousel-slide" key={i}>
-							<img
-								src={image.src}
-								alt={image.alt}
-							/>
+							<img src={image.src} alt={image.alt} />
 						</div>
 					))}
 				</div>
 			</div>
 			<div className="carousel-controls hidden-desktop">
-				<button
-					className="arrow-previous"
-					onClick={prevSlide}
-					aria-label="Previous image"
-				>
+				<button onClick={prevSlide} aria-label="Previous image">
 					<Icon>
 						<path d="M21 12L3 12M3 12L11.5 3.5M3 12L11.5 20.5" />
 					</Icon>
 				</button>
-				<button
-					className="arrow-next"
-					onClick={nextSlide}
-					aria-label="Next image"
-				>
+				<button onClick={nextSlide} aria-label="Next image">
 					<Icon>
 						<path d="M3 12L21 12M21 12L12.5 3.5M21 12L12.5 20.5" />
 					</Icon>
