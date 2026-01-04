@@ -1,15 +1,27 @@
 // Styles
-import "components/Button/Button.css"
+import "components/Button/Button.css";
 
-function Button( {children, icon, variant} ) {
-	const className = variant === "light" ? "button light" : "button dark"
-
+const Button = ({
+	href,
+	variant = "light",
+	target = "_self",
+	rel,
+	icon,
+	onClick,
+	children,
+}) => {
 	return (
-		<button className={className}>
+		<a
+			href={href}
+			className={`button ${variant}`}
+			target={target}
+			onClick={onClick}
+			rel={rel}
+		>
 			<p className="button-text">{children}</p>
 			{icon}
-		</button>
-	)
-}
+		</a>
+	);
+};
 
-export default Button
+export default Button;
