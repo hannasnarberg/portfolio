@@ -23,7 +23,13 @@
 	border-radius: 0.5rem;
 }
 
-.project-description {
+.paragraph-container {
+	display: flex;
+	flex-direction: column;
+	gap: 1.25rem;
+}
+
+.paragraph {
 	max-width: 36ch;
 	text-align: center;
 }
@@ -42,7 +48,7 @@
 		gap: 1.75rem;
 	}
 
-	.project-description {
+	.paragraph {
 		max-width: 56ch;
 		text-align: center;
 	}
@@ -56,9 +62,7 @@
 			"title image"
 			"skills image"
 			"buttons image"
-			"paragraph-one paragraph-one"
-			"paragraph-two paragraph-two"
-			"paragraph-three paragraph-three";
+			"description description";
 		column-gap: 1rem;
 		row-gap: 1rem;
 		margin-top: 2rem;
@@ -70,9 +74,7 @@
 			"image title"
 			"image skills"
 			"image buttons"
-			"paragraph-one paragraph-one"
-			"paragraph-two paragraph-two"
-			"paragraph-three paragraph-three";
+			"description description";
 	}
 
 	.project-title,
@@ -97,22 +99,14 @@
 		grid-area: image;
 	}
 
-	.project-description {
+	.paragraph-container {
+		grid-area: description;
+	}
+
+	.paragraph {
 		margin-top: 2.5rem;
 		max-width: 100%;
 		text-align: left;
-	}
-
-	.paragraph-one {
-		grid-area: paragraph-one;
-	}
-
-	.paragraph-two {
-		grid-area: paragraph-two;
-	}
-
-	.paragraph-three {
-		grid-area: paragraph-three;
 	}
 }
 
@@ -131,8 +125,7 @@
 	.project-image-container {
 		gap: 0.375rem;
 	}
-
-	.project-description {
+	.paragraph {
 		margin-top: 2.5rem;
 	}
 }

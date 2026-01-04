@@ -11,18 +11,7 @@ function Projects() {
 		<section id="projects" className="projects section">
 			<h1 className="section-header">Projects</h1>
 			{projects.map((project) => (
-				<ProjectItem
-					title={project.title}
-					src={project.src}
-					alt={project.alt}
-					disclaimer={project.disclaimer}
-					skills={project.skills}
-					paragraphOne={project.paragraphOne}
-					paragraphTwo={project.paragraphTwo}
-					paragraphThree={project.paragraphThree}
-					siteLink={project.siteLink}
-					repoLink={project.repoLink}
-				/>
+				<ProjectItem {...project} />
 			))}
 			<IconHome />
 		</section>

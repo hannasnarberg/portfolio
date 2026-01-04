@@ -10,11 +10,9 @@ function ProjectItem({
 	title,
 	src,
 	alt,
-	disclaimer,
+	imageCaption,
 	skills,
-	paragraphOne,
-	paragraphTwo,
-	paragraphThree,
+	paragraphs,
 	repoLink,
 	siteLink,
 }) {
@@ -23,26 +21,16 @@ function ProjectItem({
 			<h2 className="project-title">{title}</h2>
 			<div className="project-image-container">
 				<img className="project-image" src={src} alt={alt} />
-				{disclaimer && (
-					<strong className="description">
-						Image is AI generated, not real code
-					</strong>
+				{imageCaption && (
+					<strong className="description">{imageCaption}</strong>
 				)}
 			</div>
 			<SkillList className="skill-list" skills={skills} />
-			<p className="project-description paragraph-one description">
-				{paragraphOne}
-			</p>
-			{paragraphTwo && (
-				<p className="project-description paragraph-two description">
-					{paragraphTwo}
-				</p>
-			)}
-			{paragraphThree && (
-				<p className="project-description paragraph-three description">
-					{paragraphThree}
-				</p>
-			)}
+			<div className="paragraph-container">
+				{paragraphs.map((paragraph) => (
+					<p className={`paragraph description`}>{paragraph}</p>
+				))}
+			</div>
 			<div className="button-container">
 				{siteLink && (
 					<a href={siteLink} target="_blank" rel="noreferrer">
